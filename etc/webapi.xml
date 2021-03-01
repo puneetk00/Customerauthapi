@@ -1,15 +1,15 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-   
-    
-
-    <route url="/V2/jaybro_customerauthapi/:email" method="GET">
+	<route url="/V2/jaybro_customerauthapi" method="GET">
         <service class="Jaybro\Customerauthapi\Api\CustomerRepositoryInterface" method="getCustomerInfo"/>
         <resources>
            <resource ref="self"/>
         </resources>
     </route>
-
-    
-
+	<route url="/V1/jaybro_customerauthapi/customer/token" method="POST">
+        <service class="Jaybro\Customerauthapi\Api\CustomerTokenServiceInterface" method="createCustomerAccessToken"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
 </routes>

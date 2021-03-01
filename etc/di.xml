@@ -4,6 +4,7 @@
 	
 
 	<preference for="Jaybro\Customerauthapi\Api\CustomerRepositoryInterface" type="Jaybro\Customerauthapi\Model\CustomerRepository" />
+	<preference for="Jaybro\Customerauthapi\Api\CustomerTokenServiceInterface" type="Jaybro\Customerauthapi\Model\CustomerTokenService" />
 	
 
 
